@@ -38,8 +38,8 @@ shutil.copy(Path('files', 'README.md'), Path(workdir, 'README.md'))
 shutil.copy(Path('files', 'ewu-mc.zs'), Path(confdir, 'scripts', 'ewu-mc.zs'))
 
 # Set the title of the minecraft window
-with open(Path(confdir, 'config', 'randompatches.cfg'), 'r+') as file:
-    data = re.sub(r'S:title=.*', f's:title=EWU-MC {ver} - Minecraft 1.12.2', file.read())
+with open(Path(confdir, 'config', 'Universal Tweaks - Tweaks.cfg'), 'r+') as file:
+    data = re.sub(r'S:\"\[1\] Display Title\"=.*', f'S:"[1] Display Title"=EWU-MC {ver} - Minecraft 1.12.2', file.read())
     file.write(data)
 
 with open(Path(confdir, 'config', 'CustomMainMenu', 'mainmenu.json'), 'r+') as file:
